@@ -8,3 +8,8 @@
 * <%= %> output tag
 * <%-- --%> comment tag
 * <%- include('file') %> partial include tag
+* fly secrets set DB_HOST=... DB_USER=... DB_PASSWORD=... DB_NAME=...
+* fly secrets set KEY=value
+* git checkout last-working-commit
+fly deploy
+* add ... commit ... fly deploy
