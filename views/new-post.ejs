@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Post</title>
+</head>
+<body>
+  <h1>Create New Post</h1>
+
+  <form action="/posts" method="POST">
+    <label>Title:<br />
+      <input type="text" name="title" required />
+    </label><br /><br />
+
+    <label>Body:<br />
+      <textarea name="body" rows="5" cols="40"></textarea>
+    </label><br /><br />
+
+    <label>User:<br />
+      <select name="user_id" required>
+        <% users.forEach(user => { %>
+          <option value="<%= user.id %>"><%= user.name %></option>
+        <% }) %>
+      </select>
+    </label><br /><br />
+
+    <button type="submit">Create Post</button>
+  </form>
+
+  <a href="/users">Back to User List</a>
+</body>
+</html>
