@@ -40,8 +40,9 @@ import { eq } from "drizzle-orm";
 const db = drizzle(pool);
 // const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
+
 serve({
-  port: 3000,
+  port: Number(process.env.PORT) || 3000,
   async fetch(req) {
     const url = new URL(req.url);
 
